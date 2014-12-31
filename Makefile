@@ -1,21 +1,15 @@
 all: get format
-get: 1 2
-format: 3
+get: 1
+format: 2
 
 1:
-	if [ -e temp-logins.json ]; then mv temp-logins.json old-logins.json; fi;
-	coffee get-users.coffee
-	# for debug - requires get-users.coffee/get-details.coffee already ran:
-	#coffee check-logins.coffee
-
-2:
 	coffee get-details.coffee
 
-3:
+2:
 	coffee format-languages.coffee
 	coffee format-users.coffee
 
-4: sync-raw sync-formatted
+3: sync-raw sync-formatted
 
 sync: sync-raw sync-formatted
 force-sync: force-sync-raw sync-formatted
