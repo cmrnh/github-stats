@@ -42,7 +42,7 @@ sortStats = (stats) ->
       stats[login]
 
 saveStats = ->
-  logins = require './temp-logins.json'
+  logins = require './mentor-handles.json'
   urls = logins.map (login) -> "https://github.com/#{login}"
   utils.batchGet urls, getStats, ->
     utils.writeStats './raw/github-users-stats.json', sortStats stats
