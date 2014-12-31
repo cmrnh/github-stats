@@ -1,6 +1,6 @@
-# GitHub top users
+# GitHub Handle Stats
 
-Generated stats: [git.io/top](http://git.io/top).
+Takes 'handles.json' (array of string github handles) and pulls stats
 
 ## Usage
 
